@@ -103,7 +103,16 @@
 
     transition: all 0.3s ease;
 }
+body {
+    background-color: black;
+    color: white;
+    transition: 0.4s;
+}
 
+.light-theme {
+    background-color: black;
+    color: white;
+}
 .play-button:hover {
     transform: translateY(-3px) scale(1.05);
 
@@ -207,11 +216,17 @@ footer a:hover {
     </a>
         <br>
         <br>
+
+        <button onclick="changeTheme()">🌙 Change Theme</button>
    <footer>
     <a href="https://tyco.it.com/privacy-policy" target="_blank">Privacy Policy</a>
 </footer>
 </div>
 </main>
-
+<script>
+    function changeTheme() {
+    document.body.classList.toggle("light-theme");
+}
+</script>
 </body>
 </html>
